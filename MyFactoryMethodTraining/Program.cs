@@ -17,6 +17,12 @@ if (!app.Environment.IsDevelopment())
 
 var messanger = new TestMassanger("TheCotOfTehas", "1234");
 messanger.SendMessage("Тут текст сообщения", "TheCotOfTehas", "Кто-то");
+
+var twitter = new TwitterMessager("TheCotOfTehas", "1234");
+var twit = twitter.CreateMassanger("Тут текст сообщения", "TheCotOfTehas", "Кто-то");
+twit.Send();
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

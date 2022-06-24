@@ -25,7 +25,7 @@
         /// <param name="password"> Пароль пользователя</param>
         public TestMassanger(string userName, string password)
         {
-            if (!string.IsNullOrWhiteSpace(userName) && string.IsNullOrWhiteSpace(password))
+            if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password))
             {
                 UserName = userName;
                 Password = password;
