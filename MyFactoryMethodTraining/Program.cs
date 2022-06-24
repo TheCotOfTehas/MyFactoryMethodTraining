@@ -1,3 +1,5 @@
+using MyFactoryMethodTraining;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,6 +15,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+var messanger = new TestMassanger("TheCotOfTehas", "1234");
+messanger.SendMessage("Тут текст сообщения", "TheCotOfTehas", "Кто-то");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
